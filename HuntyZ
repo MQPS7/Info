@@ -1,0 +1,49 @@
+
+--[[ Hunty Zombie | Info ]]
+
+return {
+	
+	Maps = {
+		"School",
+		"Sewers",
+		"Carnival"
+	},
+
+	Difficultys = {
+		"Normal",
+		"Hard",
+		"Nightmare"
+	},
+
+	Modes = {
+		"None",
+		"Campaign",
+		"Endless"
+	},
+
+	Codes = {
+		"Hunty Zombie Code Here"
+	},
+
+	Perks = {
+		"BERSERKER",
+		"HEALER",
+		"FLAME",
+		"CRITICAL",
+		"UNDEAD",
+		"VAMPIRE",
+		"DOUBLEDMG"
+	},
+
+	Weapons = {
+		"BASEBALL",
+		"AXES",
+		"GUITAR",
+		"DUAL GUN",
+		"ZOMBIE CLAWS",
+		"KATANA",
+		"GREATSWORD",
+		"SCISSORS"
+	}
+
+}
