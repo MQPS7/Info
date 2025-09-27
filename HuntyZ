@@ -34,8 +34,8 @@ return {
 		"UNDEAD",
 		"LASTHOPE",
 		"VAMPIRE",
-		"DOUBLEDMG"
-		"DAMAGESHIELD"
+		"DOUBLEDMG",
+		"DAMAGESHIELD",
 	},
 
 	Weapons = {
