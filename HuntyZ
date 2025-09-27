@@ -18,7 +18,8 @@ return {
 	Modes = {
 		"None",
 		"Campaign",
-		"Endless"
+		"Endless",
+		"Raid"
 	},
 
 	Codes = {
@@ -43,7 +44,9 @@ return {
 		"ZOMBIE CLAWS",
 		"KATANA",
 		"GREATSWORD",
-		"SCISSORS"
+		"SCISSORS",
+		"ANCHOR",
+		"SHOES",
 	}
 
 }
