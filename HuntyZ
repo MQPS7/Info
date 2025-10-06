@@ -3,7 +3,7 @@
 
 return {
 
-    ATKbuff = "\t\006\001"
+    ATKbuff = "\t\006\001",
 	
 	Maps = {
 		"School",
