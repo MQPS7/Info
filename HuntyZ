@@ -11,6 +11,11 @@ return {
 		"Carnival"
 	},
 
+    Maps_Raid = {
+		"Shogun Castle",
+		"Graveyard"
+	},
+
 	Difficultys = {
 		"Normal",
 		"Hard",
