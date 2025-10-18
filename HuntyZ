@@ -8,11 +8,8 @@ return {
 	Maps = {
 		"School",
 		"Sewers",
-		"Carnival"
-	},
-
-    Maps_Raid = {
-		"Shogun Castle",
+		"Carnival",
+        "Shogun Castle",
 		"Graveyard"
 	},
 
