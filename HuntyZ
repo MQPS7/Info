@@ -3,21 +3,21 @@
 
 return {
 
-    ATKbuff = "\t\006\001",
+	ATKbuff = "\t\006\001",
 
-    All_Buffer_fromstring_Attack_Arg = {
-	    "\t\006\001", "\t\a\001", "\t\004\001", "\t\t\001", "\b\001"
-    },
-	
+	All_Buffer_fromstring_Attack_Arg = {
+		"\t\006\001", "\t\a\001", "\t\004\001", "\t\t\001", "\b\001"
+	},
+
 	Maps = {
 		"School",
 		"Sewers",
 		"Carnival",
-        "Shogun Castle",
+		"Shogun Castle",
 		"Graveyard"
 	},
 
-    Maps_Raid = {
+	Maps_Raid = {
 		"Shogun Castle",
 		"Graveyard"
 	},
@@ -46,6 +46,7 @@ return {
 		"CRITICAL",
 		"UNDEAD",
 		"LASTHOPE",
+		"ADRENALINE",
 		"VAMPIRE",
 		"DOUBLEDMG",
 		"DAMAGESHIELD",
@@ -54,6 +55,7 @@ return {
 	Weapons = {
 		"BASEBALL",
 		"AXES",
+		"PURE HAND",
 		"GUITAR",
 		"DUAL GUN",
 		"ZOMBIE CLAWS",
@@ -62,6 +64,8 @@ return {
 		"SCISSORS",
 		"ANCHOR",
 		"SHOES",
+		"GHOST",
+		"SPIN BLADE",
 	}
 
 }
