@@ -18,7 +18,7 @@ local function queueCheck()
         print("AUTO_REJOIN:", tostring(getgenv().AUTO_REJOIN))
         if game.PlaceId == SIGNAL_CHECK then
             print("อยู่ World 1 → queue รอรอบถัดไป")
-            queueonteleport(game:HttpGet("url")) -- ใส่ลิงก์ url วิธีใส่ทั้งโค้ดนี้ไปใน github หรืออะไรก็ได้ 
+            queueonteleport(game:HttpGet("https://raw.githubusercontent.com/MQPS7/Info/refs/heads/main/Rejoin")) -- ใส่ลิงก์ url วิธีใส่ทั้งโค้ดนี้ไปใน github หรืออะไรก็ได้ 
             return
         end
         if game.PlaceId == TARGET_PLACE then
