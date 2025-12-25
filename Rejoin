@@ -1,0 +1,54 @@
+local Players = game:GetService("Players")
+local TeleportService = game:GetService("TeleportService")
+local CoreGui = game:GetService("CoreGui")
+local GuiService = game:GetService("GuiService")
+local player = Players.LocalPlayer
+getgenv().AUTO_REJOIN = getgenv().AUTO_REJOIN or false
+
+local TARGET_PLACE = 129009554587176 -- โลกที่ใช่หลอก Rejoin
+local SIGNAL_CHECK   = 76558904092080 -- โลกที่เราต้องการอยู่จริงๆ
+
+local function queueCheck()
+	queueonteleport([[
+        repeat task.wait(0.5) until game:IsLoaded()
+        local TARGET_PLACE = 129009554587176
+        local SIGNAL_CHECK   = 76558904092080
+        print("[QUEUE] Loaded")
+        print("PlaceId:", game.PlaceId)
+        print("AUTO_REJOIN:", tostring(getgenv().AUTO_REJOIN))
+        if game.PlaceId == SIGNAL_CHECK then
+            print("อยู่ World 1 → queue รอรอบถัดไป")
+            queueonteleport(game:HttpGet("url")) -- ใส่ลิงก์ url วิธีใส่ทั้งโค้ดนี้ไปใน github หรืออะไรก็ได้ 
+            return
+        end
+        if game.PlaceId == TARGET_PLACE then
+            print("Rejoin สำเร็จ กลับมา World 2 แล้ว")
+            getgenv().AUTO_REJOIN = false
+        end
+    ]])
+end
+local function forceRejoin()
+	if getgenv().AUTO_REJOIN then return end
+	getgenv().AUTO_REJOIN = true
+	print("Force Rejoin → Teleport ไป World 1")
+	queueCheck()
+	TeleportService:Teleport(SIGNAL_CHECK, player)
+end
+pcall(function()
+	CoreGui.RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
+		if child.Name == "ErrorPrompt" or child.Name == "KickPrompt" then
+			warn("Error / Kick detected")
+			forceRejoin()
+		end
+	end)
+end)
+GuiService.ErrorMessageChanged:Connect(function()
+	warn("ErrorMessageChanged detected")
+	forceRejoin()
+end)
+repeat task.wait() until game:IsLoaded()
+print("Game Loaded:", game.PlaceId)
+if game.PlaceId ~= TARGET_PLACE then
+	getgenv().AUTO_REJOIN = true
+	queueCheck()
+end
